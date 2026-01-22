@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EPFO Guide | Hema Kiran Thotakura</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>EPFO Guide</h1>
+<p class="lang-desc">Simplifying EPFO services for every employee</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="guide.html">EPFO Guide</a>
+<a href="contact.html">Contact</a>
+<select onchange="changeLanguage(this.value)">
+  <option value="en">English</option>
+  <option value="te">తెలుగు</option>
+  <option value="hi">हिंदी</option>
+</select>
+</nav>
+</header>
+
+<section class="content">
+
+<h2>Eligibility Checker</h2>
+<label>Reason for EPFO action:</label>
+<select id="reason">
+<option value="">Select</option>
+<option value="job">Changing Job</option>
+<option value="unemployed">Unemployed</option>
+<option value="medical">Medical Need</option>
+</select>
+
+<label>Years of service:</label>
+<input type="number" id="years" placeholder="Enter number of years">
+
+<button onclick="checkEPFO()">Check Eligibility</button>
+<p id="result"></p>
+
+<hr>
+<h2>Claim Status Explanation</h2>
+<select id="claimStatus">
+<option value="">Select Status</option>
+<option value="underprocess">Under Process</option>
+<option value="settled">Settled</option>
+<option value="rejected">Rejected</option>
+<option value="employer">Pending Employer</option>
+</select>
+<button onclick="explainStatus()">Explain</button>
+<p id="statusResult"></p>
+
+<hr>
+<h2>Document Name Mismatch Checker</h2>
+<input type="text" id="aadhaarName" placeholder="Aadhaar Name">
+<input type="text" id="bankName" placeholder="Bank Name">
+<input type="text" id="epfoName" placeholder="EPFO Name">
+<button onclick="checkMismatch()">Check Mismatch</button>
+<p id="docResult"></p>
+
+<hr>
+<h2>EPFO Grievance Auto Draft</h2>
+<select id="issue">
+<option value="">Select Issue</option>
+<option value="delay">Claim Delay</option>
+<option value="rejection">Claim Rejection</option>
+<option value="kyc">KYC Approval Issue</option>
+</select>
+<input type="text" id="office" placeholder="EPFO Office (optional)">
+<button onclick="generateGrievance()">Generate Grievance</button>
+<textarea id="grievanceText" rows="6" readonly></textarea>
+
+<hr>
+<h2>Download EPFO Checklist</h2>
+<button onclick="downloadChecklist()">Download PF Withdrawal Checklist</button>
+
+<hr>
+<h2>Track Your EPFO Case</h2>
+<input type="text" id="caseId" placeholder="Enter Case Reference Number">
+<button onclick="trackCase()">Track</button>
+<p id="caseResult"></p>
+
+</section>
+
+<footer>
+<p>© 2026 Hema Kiran Thotakura. All Rights Reserved.<br>
+Independent EPFO guidance platform. Not affiliated with EPFO or Government of India.</p>
+<a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a>
+</footer>
+
+<a href="#" class="whatsapp-float">💬</a>
+<script src="script.js"></script>
+</body>
+</html>
